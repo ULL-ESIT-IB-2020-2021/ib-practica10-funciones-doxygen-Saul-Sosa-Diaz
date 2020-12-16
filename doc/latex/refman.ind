@@ -1,0 +1,26 @@
+\begin{theindex}
+
+  \item {fibonacci\+\_\+main.\+cc}, \hyperpage{1}
+  \item {fibonacci\+\_\+sum}
+    \subitem {fibonacci\+\_\+sum.\+cc}, \hyperpage{2}
+    \subitem {fibonacci\+\_\+sum.\+h}, \hyperpage{4}
+  \item {fibonacci\+\_\+sum.\+cc}, \hyperpage{1}
+    \subitem {fibonacci\+\_\+sum}, \hyperpage{2}
+    \subitem {Usage}, \hyperpage{2}
+  \item {fibonacci\+\_\+sum.\+h}, \hyperpage{4}
+    \subitem {fibonacci\+\_\+sum}, \hyperpage{4}
+    \subitem {k\+Help\+Text}, \hyperpage{6}
+    \subitem {Usage}, \hyperpage{5}
+
+  \indexspace
+
+  \item {k\+Help\+Text}
+    \subitem {fibonacci\+\_\+sum.\+h}, \hyperpage{6}
+
+  \indexspace
+
+  \item {Usage}
+    \subitem {fibonacci\+\_\+sum.\+cc}, \hyperpage{2}
+    \subitem {fibonacci\+\_\+sum.\+h}, \hyperpage{5}
+
+\end{theindex}
