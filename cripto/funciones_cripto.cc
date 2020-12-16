@@ -1,9 +1,9 @@
 #include "funciones_cripto.h"
 using namespace std;
 
+//------------------------------------------------------------------------------------------------------------------------------------------
 
-
-void Help(int argc, char* palabra){
+void Help(int argc, char* palabra){ //Te dice como usar el programa
   std::string ayuda = "--help";
   //Si solo se introduce el nombre del programa se mostrara esto
   if(argc == 1){
@@ -27,7 +27,11 @@ void Help(int argc, char* palabra){
   }
 }
 
-void encrypt_data(FILE* input_file, FILE* output_file, char* key){
+//----------------------------------------------------------------------------------------------------------------------------------
+
+//Funciones metodo xor
+
+void encrypt_data(FILE* input_file, FILE* output_file, char* key){  //encripta, desencripta en XOR
 	int key_count = 0;                                                    //usado para restaurar la clave si strlen(key) < strlen(encriptado)
 	int encrypt_byte;
 	
@@ -51,6 +55,9 @@ void strip_newline(char* to_strip){  //borra los enters
 	}
 }
 
+//-----------------------------------------------------------------------------------------------------------------------------
+
+//funciones metodo Cesar
 
 std::string CesarCodi(std::string frase, std::string contrasena){  //Codifica en formato Cesar
   std::string cesarString = frase;

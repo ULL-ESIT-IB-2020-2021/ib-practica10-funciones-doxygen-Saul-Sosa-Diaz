@@ -20,9 +20,6 @@
 
 
 #include "funciones_cripto.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 #define MAX_SIZE 256
 

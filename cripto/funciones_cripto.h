@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 void Help(int , char*);
 void strip_newline(char* );
 void encrypt_data(FILE* , FILE* , char *);
