@@ -35,12 +35,10 @@ void encrypt_data(FILE* input_file, FILE* output_file, char* key){  //encripta, 
 	int key_count = 0;                                                    //usado para restaurar la clave si strlen(key) < strlen(encriptado)
 	int encrypt_byte;
 	
-	while( (encrypt_byte = fgetc(input_file)) != EOF) //bucle hasta que se acaba el archivo
-	{
+	while( (encrypt_byte = fgetc(input_file)) != EOF){//bucle hasta que se acaba el archivo
 		
 		fputc(encrypt_byte ^ key[key_count], output_file);
 
-		
 		key_count++;
 		if(key_count == strlen(key))
 			key_count = 0;
@@ -49,8 +47,7 @@ void encrypt_data(FILE* input_file, FILE* output_file, char* key){  //encripta, 
 
 void strip_newline(char* to_strip){  //borra los enters
 	
-	if (to_strip[strlen(to_strip) - 1] == '\n')
-	{
+	if (to_strip[strlen(to_strip) - 1] == '\n'){
 		to_strip[strlen(to_strip) - 1] = '\0';
 	}
 }
@@ -76,4 +73,15 @@ std::string CesarDescodi(std::string frase, std::string contrasena){ // descodif
     cesarString[i] = char(suma);
   }
 return cesarString;
+}
+//Modificación ------------------------------------------------------
+int RepeticionesDeU(std::string fraseTestear){ //Detecta cuantas u hay en un archivo
+  int result = 0;
+  char vocal_U = 'u';
+  for(int i = 0; i < fraseTestear.size(); i++){
+    if(fraseTestear[i] == vocal_U ){
+      result++;   
+    }
+  }
+return result;  
 }

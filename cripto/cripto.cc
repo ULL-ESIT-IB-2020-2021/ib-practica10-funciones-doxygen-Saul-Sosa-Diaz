@@ -28,12 +28,29 @@ int main(int argc, char* argv[]){
   std::string codificador = "+", descodificador = "-";  
   std::string contrasena = argv[4];
   Help(argc, argv[1]);
-  //Declaracion de archivos
+  
+  if( 1 > 0){
+   std::ifstream paraCodificar;
+   //Abrimos los archivos
+   paraCodificar.open(argv[1], std::ios::in);
+   int resultado_u = 0;
+  while(paraCodificar){
+    std::string strInput;
+    std::getline(paraCodificar, strInput); //Guarda una string hasta \n
+    resultado_u += RepeticionesDeU(strInput); // Da cuantas u hay en un fichero
+  }
+   
+  std::cout<< "El archivo contiene: " << resultado_u <<" u " <<  std::endl;
+  paraCodificar.close();
+  }
   FILE* paraCodificar;
   FILE* codificado;
+  
   //Abrir los archivos en modo lectura y escritura
   paraCodificar = fopen(argv[1], "r");
 	codificado = fopen(argv[2], "w");
+  
+  
   //Mensaje de error si no se puede abrir el documento 1
   if (!paraCodificar) { 
     std::cerr << "Uh oh, Tu archivo de texto no existe, prueba a crearlo!\n";

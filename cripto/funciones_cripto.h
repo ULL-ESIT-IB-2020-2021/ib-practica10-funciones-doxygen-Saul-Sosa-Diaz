@@ -12,3 +12,4 @@ void strip_newline(char* );
 void encrypt_data(FILE* , FILE* , char *);
 std::string CesarCodi(std::string, std::string);
 std::string CesarDescodi(std::string, std::string);
+int RepeticionesDeU(std::string fraseTestear);
